@@ -49,6 +49,8 @@ else
     ROOT="${DISK}3"
 fi
 
+wipefs --all --force "$EFI" "$SWAP" "$ROOT"
+
 mkfs.fat -F 32 -n EFI "$EFI"
 mkswap -L swap "$SWAP"
 mkfs.btrfs -L nixos "$ROOT"
