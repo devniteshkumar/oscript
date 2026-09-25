@@ -20,6 +20,10 @@ echo
 read -rp "ERASE $DISK? Type 'y' to continue: " CONFIRM
 [[ "$CONFIRM" == "y" ]] || exit 1
 
+# Remove existing partition tables and filesystem signatures.
+wipefs --all --force "$DISK"
+sgdisk --zap-all "$DISK"
+
 # RAM + 4 GiB swap
 RAM_MIB=$(awk '/MemTotal/ {print int($2 / 1024)}' /proc/meminfo)
 SWAP_MIB=$((RAM_MIB + 4096))
