@@ -2,7 +2,8 @@
 set -euo pipefail
 
 git clone https://github.com/devniteshkumar/oscript.git oscript
-cp -r ~/oscript/post-install/dotfiles ~/dotfiles
+mkdir -p dotfiles
+cp -r ~/oscript/post-install/dotfiles/. ~/dotfiles/
 rm -rf oscript
 
 cd dotfiles
