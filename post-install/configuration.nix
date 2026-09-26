@@ -132,6 +132,7 @@
     fd
     ripgrep
     zoxide
+    openssh
 
     # Fonts
     noto-fonts-emoji
