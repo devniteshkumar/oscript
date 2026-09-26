@@ -39,10 +39,10 @@
   home.file.".gtkrc-2.0".source = ../dotfiles/.gtkrc-2.0;
   home.file.".zshenv".source = ../dotfiles/.zshenv;
 
-  programs.zsh = {
-    enable = true;
-    dotDir = "${config.home.homeDirectory}/.config/zsh";
-  };
+  # programs.zsh = {
+  #   enable = true;
+  #   dotDir = "${config.home.homeDirectory}/.config/zsh";
+  # };
 
   programs.starship.enable = true;
 
