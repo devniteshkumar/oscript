@@ -110,7 +110,7 @@
     firefox
     kitty
     kdePackages.dolphin
-    ark
+    kdePackages.ark
     unzip
     nwg-displays
     neovim
