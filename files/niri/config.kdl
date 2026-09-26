@@ -1,0 +1,13 @@
+input {
+    keyboard {
+        xkb {
+            layout "us"
+        }
+    }
+}
+
+layout {
+    gaps 8
+}
+
+spawn-at-startup "xwayland-satellite"
