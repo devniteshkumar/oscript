@@ -7,7 +7,7 @@ sudo nixos-generate-config --root /mnt
 REPO_DIR="$(mktemp -d)"
 curl -fL --retry 3 https://github.com/devniteshkumar/oscript/archive/refs/heads/main.tar.gz -o "$REPO_DIR/oscript.tar.gz"
 tar -xzf "$REPO_DIR/oscript.tar.gz" -C "$REPO_DIR"
-REPO_FILES="$REPO_DIR/oscript-main/files"
+REPO_FILES="$REPO_DIR/oscript-main/pre-install"
 sudo cp "$REPO_FILES/flake.nix" /mnt/etc/nixos/flake.nix
 sudo cp "$REPO_FILES/configuration.nix" /mnt/etc/nixos/configuration.nix
 sudo cp "$REPO_FILES/home.nix" /mnt/etc/nixos/home.nix

@@ -43,7 +43,7 @@
 
     settings = {
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --cmd niri-session";
+        command = "${pkgs.tuigreet}/bin/tuigreet --cmd niri-session";
         user = "greeter";
       };
     };
@@ -52,7 +52,7 @@
   # User
   users.users.niteshk = {
     isNormalUser = true;
-    description = "Niteshk";
+    description = "niteshk";
     extraGroups = [
       "wheel"
       "networkmanager"

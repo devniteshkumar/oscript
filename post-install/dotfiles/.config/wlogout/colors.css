@@ -1,0 +1,4 @@
+@define-color win-bg rgba(27,27,41,0.25);
+@define-color btn-bg rgba(27,27,41,0.85);
+@define-color hover-bg rgba(44,41,82,0.90);
+@define-color focus-bg rgba(44,41,82,0.90);
