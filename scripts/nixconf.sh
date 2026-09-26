@@ -15,6 +15,7 @@ sudo mkdir -p /mnt/etc/nixos/niri
 sudo cp "$REPO_FILES/niri/config.kdl" /mnt/etc/nixos/niri/config.kdl
 rm -rf "$REPO_DIR"
 cd /mnt/etc/nixos
+sudo nix --extra-experimental-features 'nix-command flakes' flake update
 sudo nixos-install --flake .#nixos
 sudo nixos-enter --root /mnt -c 'passwd niteshk'
 sudo nixos-enter --root /mnt -c 'id niteshk'
