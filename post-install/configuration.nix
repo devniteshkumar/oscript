@@ -54,11 +54,6 @@
     ];
   };
 
-  # Niri/XWayland integration.
-  environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
-  };
-
   # The rice uses SDDM. If you already have another display manager,
   # leave SDDM disabled here and keep only one display manager enabled.
   services.displayManager.sddm = {
