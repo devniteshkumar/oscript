@@ -1,10 +1,32 @@
 { config, pkgs, ... }:
 
 {
-  # Niri is packaged directly by NixOS 26.05.
-  programs.niri.enable = true;
+  imports = [
+    ./hardware-configuration.nix
+  ];
 
-  # Required services used by the rice.
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+
+  users.users.niteshk = {
+    isNormalUser = true;
+    description = "niteshk";
+
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+      "video"
+      "audio"
+    ];
+
+    shell = pkgs.zsh;
+  };
+
+  programs.niri.enable = true;
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+  };
+
   networking.networkmanager.enable = true;
 
   hardware.bluetooth.enable = true;
@@ -116,7 +138,5 @@
     nerd-fonts.jetbrains-mono
   ];
 
-  # Keep your existing hardware-configuration.nix.
-  # This template assumes it is copied beside this file.
   system.stateVersion = "26.05";
 }
