@@ -103,7 +103,7 @@
 
     # Theming / Qt
     nwg-look
-    qt6ct
+    qt6Packages.qt6ct
     kdePackages.qtstyleplugin-kvantum
 
     # Applications
