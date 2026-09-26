@@ -129,7 +129,7 @@
     openssh
 
     # Fonts
-    noto-fonts-emoji
+    noto-fonts-color-emoji
     nerd-fonts.jetbrains-mono
   ];
 
