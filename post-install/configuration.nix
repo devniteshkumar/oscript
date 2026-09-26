@@ -109,7 +109,7 @@
     # Applications
     firefox
     kitty
-    dolphin
+    kdePackages.dolphin
     ark
     unzip
     nwg-displays
